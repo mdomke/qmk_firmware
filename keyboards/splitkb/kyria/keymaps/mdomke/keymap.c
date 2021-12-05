@@ -16,7 +16,7 @@
 #include QMK_KEYBOARD_H
 
 enum layers {
-    _QWERTZ = 0,
+    _QWERTY = 0,
     _NAV,
     _SYM,
     _NUM,
@@ -25,7 +25,7 @@ enum layers {
 
 
 // Aliases for readability
-#define QWERTZ   DF(_QWERTZ)
+#define QWERTZ   DF(_QWERTY)
 
 #define SYM      MO(_SYM)
 #define NAV      MO(_NAV)
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                               |      |  Alt | Shift|      |  |      | Shift| AltGr|      |
  *                               `---------------------------'  `----------------------------
  */
-    [_QWERTZ] = LAYOUT(
+    [_QWERTY] = LAYOUT(
      KC_TAB  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                         KC_Y,     KC_U ,  KC_I ,   KC_O ,  KC_P , KC_PIPE,
      CTL_ESC , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                         KC_H,     KC_J ,  KC_K ,   KC_L ,KC_SCLN, CTL_QUOT,
      NAV     , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC  ,KC_CAPS,    ADJUST  , KC_RBRC, KC_N,     KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_MINS ,
@@ -190,17 +190,17 @@ static void render_status(void) {
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state|default_layer_state)) {
-        case _QWERTZ:
+        case _QWERTY:
             oled_write_P(PSTR("QWERTY\n"), false);
             break;
         case _NAV:
-            oled_write_P(PSTR("Nav\n"), false);
+            oled_write_P(PSTR("Navigation\n"), false);
             break;
         case _SYM:
-            oled_write_P(PSTR("Sym\n"), false);
+            oled_write_P(PSTR("Symbols\n"), false);
             break;
           case _NUM:
-            oled_write_P(PSTR("Num\n"), false);
+            oled_write_P(PSTR("Numbers\n"), false);
             break;
         case _ADJUST:
             oled_write_P(PSTR("Adjust\n"), false);
