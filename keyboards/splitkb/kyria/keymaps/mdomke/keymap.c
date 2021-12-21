@@ -32,12 +32,12 @@ enum layers {
 #define NUM      MO(_NUM)
 #define ADJUST   MO(_ADJUST)
 
-#define CTL_ESC  MT(MOD_LCTL, KC_ESC)
-#define CTL_QUOT MT(MOD_RCTL, KC_QUOTE)
-#define ALT_ENT  MT(MOD_LALT, KC_ENT)
-#define LSFT_SPC MT(MOD_LSFT, KC_SPC)
-#define RSFT_SPC MT(MOD_RSFT, KC_SPC)
-#define ALT_BKSP MT(MOD_RALT, KC_BSPC)
+#define LSFT_ESC  MT(MOD_LSFT, KC_ESC)
+#define RSFT_QUOT MT(MOD_RSFT, KC_QUOTE)
+#define ALT_ENT   MT(MOD_LALT, KC_ENT)
+#define LCTL_SPC  MT(MOD_LCTL, KC_SPC)
+#define RCTL_SPC  MT(MOD_RCTL, KC_SPC)
+#define ALT_BKSP  MT(MOD_RALT, KC_BSPC)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -48,19 +48,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  |  | \   |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |Ctrl/Esc|   A  |   S  |   D  |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |Ctrl/' "|
+ * | Sft/Esc|   A  |   S  |   D  |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : | Sft/' "|
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | Nav    |   Z  |   X  |   C  |   V  |   B  | [ {  |CapsLk|  |Adjust|  ] } |   N  |   M  | ,  < | . >  | /  ? |Sym/- _ |
+ * | Nav    |   Z  |   X  |   C  |   V  |   B  | [ {  |CapsLk|  |Adjust|  ] } |   N  |   M  | ,  < | . >  | /  ? |   - _  |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                               | LGUI | Enter| Space| Num  |  | Sym  | Space| Bksp | RGUI |
- *                               |      |  Alt | Shift|      |  |      | Shift| AltGr|      |
+ *                               | LGUI | Enter| Space| Num  |  | Sym  | Space|   =  | RGUI |
+ *                               |      |  Alt | Ctrl |      |  |      | Ctrl |  Alt |      |
  *                               `---------------------------'  `----------------------------
  */
     [_QWERTY] = LAYOUT(
-     KC_TAB  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                         KC_Y,     KC_U ,  KC_I ,   KC_O ,  KC_P , KC_PIPE,
-     CTL_ESC , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                         KC_H,     KC_J ,  KC_K ,   KC_L ,KC_SCLN, CTL_QUOT,
+     KC_TAB  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                         KC_Y,     KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC,
+     LSFT_ESC, KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                         KC_H,     KC_J ,  KC_K ,   KC_L ,KC_SCLN, RSFT_QUOT,
      NAV     , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC  ,KC_CAPS,    ADJUST  , KC_RBRC, KC_N,     KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_MINS ,
-                                 KC_MUTE, KC_LGUI, ALT_ENT, LSFT_SPC , NUM   ,    SYM     , RSFT_SPC, ALT_BKSP, KC_RGUI, KC_APP
+                                 KC_MUTE, KC_LGUI,  ALT_ENT   , LCTL_SPC , NUM,   SYM, RCTL_SPC, MT(MOD_RALT,KC_EQL)  , KC_RGUI, KC_APP
     ),
 
 /*
@@ -119,9 +119,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_SYM] = LAYOUT(
-      _______, _______, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,                                     _______, KC_UNDS, ALGR(KC_5),_______,_______,_______,
-      _______, KC_EXLM, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV,                                      KC_MINS, KC_PLUS, KC_ASTR, KC_BSLS,  KC_PERC,_______,
-      _______, KC_HASH, KC_CIRC, KC_LBRC, KC_RBRC, _______, _______, _______, _______, _______, KC_UNDS, KC_AT  , KC_AMPR, KC_TILD,  KC_EQL ,_______,
+      _______, _______, KC_AT,   KC_LCBR, KC_RCBR, _______,                                     _______, KC_UNDS, ALGR(KC_5),_______,_______,_______,
+      _______, KC_EXLM, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV ,                                     KC_MINS, KC_PLUS, KC_ASTR, KC_BSLS,  KC_PERC,_______,
+      _______, KC_HASH, KC_CIRC, KC_LBRC, KC_RBRC, KC_PIPE, _______, _______, _______, _______, KC_UNDS, KC_AT  , KC_AMPR, KC_TILD,  KC_EQL ,_______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
