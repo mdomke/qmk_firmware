@@ -31,4 +31,7 @@
 /* #define SPLIT_USB_DETECT */
 /* #define NO_USB_STARTUP_CHECK */
 
-#define LEADER_TIMEOUT 300
+#define LEADER_TIMEOUT 250
+#define LEADER_PER_KEY_TIMING
+
+#define TAPPING_TERM   175
