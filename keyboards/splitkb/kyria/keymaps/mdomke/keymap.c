@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [LAY_QWERTY] = LAYOUT(
      KC_TAB  , KC_Q  ,  KC_W   , KC_E   , KC_R   , KC_T   ,                                       KC_Y   , KC_U   , KC_I   , KC_O  , KC_P     , KC_BSPC  ,
      HYPR_ESC, LSFT_A,  KC_S   , KC_D   , KC_F   , KC_G   ,                                       KC_H   , KC_J   , KC_K   , KC_L  , RSFT_SCLN, KC_QUOTE,
-     NAV     , KC_Z  ,  KC_X   , KC_C   , KC_V   , KC_B   , FKEYS    , KC_CAPS, ADJUST, KC_LEAD , KC_N   , KC_M   , KC_COMM, KC_DOT, KC_SLSH  , KC_MINS  ,
+     NAV     , KC_Z  ,  KC_X   , KC_C   , KC_V   , KC_B   , FKEYS    , KC_CAPS, ADJUST, QK_LEAD , KC_N   , KC_M   , KC_COMM, KC_DOT, KC_SLSH  , KC_MINS  ,
                                 KC_MUTE, KC_LGUI, ALT_ENT, LCTL_SPC , NUM    , SYM   , RCTL_SPC, ALT_EQL, KC_RGUI, KC_APP
     ),
 
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [LAY_NAV] = LAYOUT(
    _______,  _______, _______, _______, _______, _______,                                    _______ , KC_PGDN, KC_PGUP, _______, _______, KC_DEL ,
    _______,  _______, _______, _______, _______, _______,                                    KC_LEFT , KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-   _______,  _______, _______, _______, _______, _______, _______, KC_SLCK, _______, _______,KC_INS  , KC_HOME, KC_END,  _______, _______, KC_PSCR,
+   _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______,KC_INS  , KC_HOME, KC_END,  _______, _______, KC_PSCR,
                                _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
  ),
 /*
@@ -269,24 +269,11 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 }
 #endif
 
-LEADER_EXTERNS();
-
-void matrix_scan_user(void) {
-    LEADER_DICTIONARY() {
-        leading = false;
-        leader_end();
-
-        SEQ_ONE_KEY(KC_A) {
-          SEND_STRING(SS_LGUI(SS_LCTL("q")));
-        }
-
-        SEQ_ONE_KEY(KC_S) {
-          SEND_STRING(SS_LGUI(SS_LSFT("4")));
-        }
-        
-        SEQ_TWO_KEYS(KC_C, KC_B) { // Code block
-            SEND_STRING("```" SS_LSFT("\n\n") "``` " SS_TAP(X_UP));
-        }
+void leader_end_user(void) {
+    if (leader_sequence_one_key(KC_A)) {
+        SEND_STRING(SS_LGUI(SS_LCTL("q")));
+    } else if (leader_sequence_one_key(KC_S)) {
+        SEND_STRING(SS_LGUI(SS_LSFT("4")));
     }
 }
 
