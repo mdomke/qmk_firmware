@@ -47,7 +47,7 @@
 
 #define LEADER_TIMEOUT 250
 #define LEADER_PER_KEY_TIMING
-#define EE_HANDS
+#define MASTER_RIGHT
 
 #define TAPPING_TERM   175
 
