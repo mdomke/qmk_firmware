@@ -1,0 +1,472 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "schema-version": "1.19.0",
+    "install": {
+      "avr-gcc": {
+        "flake": "github:NixOS/nixpkgs/nixpkgs-unstable#pkgsCross.avr.buildPackages.gcc"
+      },
+      "avrdude": {
+        "pkg-path": "avrdude"
+      },
+      "dfu-programmer": {
+        "pkg-path": "dfu-programmer"
+      },
+      "dfu-util": {
+        "pkg-path": "dfu-util"
+      },
+      "qmk": {
+        "pkg-path": "qmk"
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {}
+  },
+  "packages": [
+    {
+      "attr_path": "avrdude",
+      "broken": false,
+      "derivation": "/nix/store/9wizifx96nzf9sry1dsw2744yiy7vak0-avrdude-8.3.drv",
+      "description": "Command-line tool for programming Atmel AVR microcontrollers",
+      "install_id": "avrdude",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "avrdude-8.3",
+      "pname": "avrdude",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T05:47:25.523839Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "8.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/j3mnk5d5wv25as4v3hrv7wbsby07n6g1-avrdude-8.3"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "avrdude",
+      "broken": false,
+      "derivation": "/nix/store/3ji8145clfln4qrshslxgzbnrdqdkxci-avrdude-8.3.drv",
+      "description": "Command-line tool for programming Atmel AVR microcontrollers",
+      "install_id": "avrdude",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "avrdude-8.3",
+      "pname": "avrdude",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:13:36.554397Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "8.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/smps1ziq6l6hhihq4ndah76c9wrr7pml-avrdude-8.3"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "avrdude",
+      "broken": false,
+      "derivation": "/nix/store/73nc1hz7sj8ks39qmlfgzm4nkjiixmxm-avrdude-8.3.drv",
+      "description": "Command-line tool for programming Atmel AVR microcontrollers",
+      "install_id": "avrdude",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "avrdude-8.3",
+      "pname": "avrdude",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:42:17.979069Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "8.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/9716m1krw1n1dy5czkirgrbz22j9dpaq-avrdude-8.3"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dfu-programmer",
+      "broken": false,
+      "derivation": "/nix/store/0yc8kcw58lcvsslcksm5ray1yxzw97wp-dfu-programmer-1.1.0.drv",
+      "description": "Device Firmware Update based USB programmer for Atmel chips with a USB bootloader",
+      "install_id": "dfu-programmer",
+      "license": "GPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "dfu-programmer-1.1.0",
+      "pname": "dfu-programmer",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T05:47:25.541266Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.1.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/519wwi1x98g0m49mbk2kpr472zxc33ci-dfu-programmer-1.1.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dfu-programmer",
+      "broken": false,
+      "derivation": "/nix/store/fw8ryxp4qaf4qmdx34bivil2ldfg4gqr-dfu-programmer-1.1.0.drv",
+      "description": "Device Firmware Update based USB programmer for Atmel chips with a USB bootloader",
+      "install_id": "dfu-programmer",
+      "license": "GPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "dfu-programmer-1.1.0",
+      "pname": "dfu-programmer",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:13:36.576543Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.1.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/6zszysrkjs6l3plwbms5a1kg975jv781-dfu-programmer-1.1.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dfu-programmer",
+      "broken": false,
+      "derivation": "/nix/store/x39dh8n6w0r296ywwxmvik9i0ckc46w3-dfu-programmer-1.1.0.drv",
+      "description": "Device Firmware Update based USB programmer for Atmel chips with a USB bootloader",
+      "install_id": "dfu-programmer",
+      "license": "GPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "dfu-programmer-1.1.0",
+      "pname": "dfu-programmer",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:42:18.006446Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.1.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/mai9ykcdhzyxlsxglv17k9mf9smnlmff-dfu-programmer-1.1.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dfu-util",
+      "broken": false,
+      "derivation": "/nix/store/zsgm82zi2a7jdin3xja2il9pixy2xgpg-dfu-util-0.11.drv",
+      "description": "Device firmware update (DFU) USB programmer",
+      "install_id": "dfu-util",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "dfu-util-0.11",
+      "pname": "dfu-util",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T05:47:25.541268Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/8934lcm3dpx869xk8jkx256hryzxpdl2-dfu-util-0.11"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dfu-util",
+      "broken": false,
+      "derivation": "/nix/store/yykn1iz2m0zd27s60fny64lgi6v28srz-dfu-util-0.11.drv",
+      "description": "Device firmware update (DFU) USB programmer",
+      "install_id": "dfu-util",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "dfu-util-0.11",
+      "pname": "dfu-util",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:13:36.576545Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/z0vv06p2s8kbdafkhvrxp363n24qcdl6-dfu-util-0.11"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dfu-util",
+      "broken": false,
+      "derivation": "/nix/store/yywyyq3ybir9vxkkhk0p1kmwfji86dfd-dfu-util-0.11.drv",
+      "description": "Device firmware update (DFU) USB programmer",
+      "install_id": "dfu-util",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "dfu-util-0.11",
+      "pname": "dfu-util",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:42:18.006449Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/52npc0m3bqaycp3ryr3pbkwfafvrf8n2-dfu-util-0.11"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "qmk",
+      "broken": false,
+      "derivation": "/nix/store/qh0c86j4p2sk2lrijp0fy3xiymgqhpd9-qmk-1.2.0.drv",
+      "description": "Program to help users work with QMK Firmware",
+      "install_id": "qmk",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "qmk-1.2.0",
+      "pname": "qmk",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T05:47:25.814529Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/nnhn9xmx13ma8lr0k67ycj9d7i33fpi8-qmk-1.2.0-dist",
+        "out": "/nix/store/rsdjmgczxmbcqqg8iryfdhcfygqrsscw-qmk-1.2.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "qmk",
+      "broken": false,
+      "derivation": "/nix/store/wgpmw6yn8kqlqgqmfsn0lb5rlvkx109z-qmk-1.2.0.drv",
+      "description": "Program to help users work with QMK Firmware",
+      "install_id": "qmk",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "qmk-1.2.0",
+      "pname": "qmk",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:13:36.871196Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/67yy2hlhy1l6379h2lrxik1s7x6zhbdn-qmk-1.2.0-dist",
+        "out": "/nix/store/3j9yzic721s9nmlxq1l7j4rx219f4558-qmk-1.2.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "qmk",
+      "broken": false,
+      "derivation": "/nix/store/zkbbhdqpyix0i82ylv8x9fkjmizrkarn-qmk-1.2.0.drv",
+      "description": "Program to help users work with QMK Firmware",
+      "install_id": "qmk",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "name": "qmk-1.2.0",
+      "pname": "qmk",
+      "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+      "rev_count": 1114946,
+      "rev_date": "2026-11-09T02:42:03Z",
+      "scrape_date": "2026-11-12T06:42:18.294424Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/7nzp52sli5c2vnv73jcd6ydsiyjzdxl3-qmk-1.2.0-dist",
+        "out": "/nix/store/jawb22jfn491fkdv0kddgfl2kj5iyin9-qmk-1.2.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "install_id": "avr-gcc",
+      "locked-url": "github:NixOS/nixpkgs/9397dcb09c9598a33509fbc0cce699bd4e6c84d5?narHash=sha256-OUDRQTMmN/6cQ/ebDsazUmLj84RxSLaHznKv5As9E1k%3D",
+      "flake-description": "A collection of packages for the Nix package manager",
+      "locked-flake-attr-path": "legacyPackages.aarch64-darwin.pkgsCross.avr.buildPackages.gcc",
+      "derivation": "/nix/store/x71ya618ik8bz6fwj7p8hv46g67z0r3z-avr-gcc-wrapper-16.2.0.drv",
+      "outputs": {
+        "info": "/nix/store/aj0439hg46mykmhpdafr9s48544q6vnc-avr-gcc-wrapper-16.2.0-info",
+        "man": "/nix/store/yx15sab3y7n2byhf2d0divkla9dk9vzc-avr-gcc-wrapper-16.2.0-man",
+        "out": "/nix/store/sms25qaxnr90l6i3l2kvirpj64l7nvsn-avr-gcc-wrapper-16.2.0"
+      },
+      "output-names": [
+        "out",
+        "man",
+        "info"
+      ],
+      "outputs-to-install": [
+        "man",
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-darwin",
+      "system": "aarch64-darwin",
+      "name": "avr-gcc-wrapper-16.2.0",
+      "pname": "avr-gcc-wrapper",
+      "version": "16.2.0",
+      "description": "GNU Compiler Collection, version 16.2.0 (wrapper script)",
+      "broken": false,
+      "unfree": false,
+      "priority": 10
+    },
+    {
+      "install_id": "avr-gcc",
+      "locked-url": "github:NixOS/nixpkgs/9397dcb09c9598a33509fbc0cce699bd4e6c84d5?narHash=sha256-OUDRQTMmN/6cQ/ebDsazUmLj84RxSLaHznKv5As9E1k%3D",
+      "flake-description": "A collection of packages for the Nix package manager",
+      "locked-flake-attr-path": "legacyPackages.aarch64-linux.pkgsCross.avr.buildPackages.gcc",
+      "derivation": "/nix/store/cp14pcd0pafy5fk11hy6gfdl54wy97xq-avr-gcc-wrapper-16.2.0.drv",
+      "outputs": {
+        "info": "/nix/store/2x8c2hmy70nfqgam6p18gad1vkdjf9q9-avr-gcc-wrapper-16.2.0-info",
+        "man": "/nix/store/722n27aqii4qvak3fj4wgy5r550w4h1y-avr-gcc-wrapper-16.2.0-man",
+        "out": "/nix/store/rnmpq4z1wyp56lvz3wyzrkxh5nlj2aqi-avr-gcc-wrapper-16.2.0"
+      },
+      "output-names": [
+        "out",
+        "man",
+        "info"
+      ],
+      "outputs-to-install": [
+        "man",
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "aarch64-linux",
+      "system": "aarch64-linux",
+      "name": "avr-gcc-wrapper-16.2.0",
+      "pname": "avr-gcc-wrapper",
+      "version": "16.2.0",
+      "description": "GNU Compiler Collection, version 16.2.0 (wrapper script)",
+      "broken": false,
+      "unfree": false,
+      "priority": 10
+    },
+    {
+      "install_id": "avr-gcc",
+      "locked-url": "github:NixOS/nixpkgs/9397dcb09c9598a33509fbc0cce699bd4e6c84d5?narHash=sha256-OUDRQTMmN/6cQ/ebDsazUmLj84RxSLaHznKv5As9E1k%3D",
+      "flake-description": "A collection of packages for the Nix package manager",
+      "locked-flake-attr-path": "legacyPackages.x86_64-linux.pkgsCross.avr.buildPackages.gcc",
+      "derivation": "/nix/store/la03qjyqs99gasvz2rw1m0f1y5ycz0k1-avr-gcc-wrapper-16.2.0.drv",
+      "outputs": {
+        "info": "/nix/store/v30p82ab1zq742k9zfb2w6ksixqxjmls-avr-gcc-wrapper-16.2.0-info",
+        "man": "/nix/store/nc7mqgs63m1lyimxn4962bzlvm2niq0w-avr-gcc-wrapper-16.2.0-man",
+        "out": "/nix/store/2ixyq4zbrc28ganwawq919nhvlgyv97d-avr-gcc-wrapper-16.2.0"
+      },
+      "output-names": [
+        "out",
+        "man",
+        "info"
+      ],
+      "outputs-to-install": [
+        "man",
+        "out"
+      ],
+      "requested-outputs-to-install": [],
+      "package-system": "x86_64-linux",
+      "system": "x86_64-linux",
+      "name": "avr-gcc-wrapper-16.2.0",
+      "pname": "avr-gcc-wrapper",
+      "version": "16.2.0",
+      "description": "GNU Compiler Collection, version 16.2.0 (wrapper script)",
+      "broken": false,
+      "unfree": false,
+      "priority": 10
+    }
+  ]
+}
